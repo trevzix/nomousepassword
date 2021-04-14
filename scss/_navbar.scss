@@ -14,6 +14,7 @@
       background-color: c.$light;
       color: c.$dark;
       cursor: pointer;
+      text-decoration: none;
       @include mixins.max-mq(361px) {
         font-size: 0.9rem;
         padding: 0.2rem;

@@ -134,6 +134,7 @@ li:not(:last-child) {
   background-color: #c4c4c4;
   color: #1a1a1a;
   cursor: pointer;
+  text-decoration: none;
 }
 @media only screen and (max-width: 361px) {
   .nav__left a {
