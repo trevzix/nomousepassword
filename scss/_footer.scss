@@ -1,6 +1,12 @@
+@use "colors" as *;
 footer {
   display: grid;
   place-items: center;
   margin: 1rem 0;
   padding-bottom: 1rem;
+}
+
+a {
+  color: $light;
+  font-weight: bold;
 }
