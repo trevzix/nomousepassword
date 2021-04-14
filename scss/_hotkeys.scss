@@ -1,0 +1,12 @@
+@use "colors"as *;
+
+.hotkeys {
+  background-color: rgb(34, 33, 33);
+  padding: 1rem;
+  span {
+    background-color: $light;
+    color: $dark;
+    padding: 0.3rem;
+    margin-right: 0.4rem;
+  }
+}

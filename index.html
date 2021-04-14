@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"><link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Test</title>
+  </head>
+  <body> 
+    <script src="script.js" defer></script>
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <div class="nav__left"><a class="logo">
+              NMPG<i class="fas fa-lock"></i></a></div>
+          <div class="nav__right"><a class="links">Instructions</a><a class="links">Syntax</a><a class="links">Hotkeys</a></div>
+        </nav>
+      </header>
+      <div class="inputs" id="inputs">
+        <div class="inputs__container">
+          <h1>INPUT</h1>
+          <input id="inputbox" type="text" name="inputbox" placeholder="ex: nl m" autofocus>
+        </div>
+        <div class="inputs__container">
+          <h1>OUTPUT</h1>
+          <input id="outputbox" type="text" name="outputbox" placeholder="ex: tjj74s8zw834">
+          <p class="inputs__message">Ouput was copied to the clipboard!</p>
+        </div>
+      </div>
+      <hr class="divisor">
+      <div class="bottom-half">
+        <div class="instructions" id="instructions">
+          <div class="title">
+            <hr>
+            <h1>Instructions</h1>
+            <hr>
+          </div>
+          <div class="description">
+            <p>The syntax consists of two arguments separated by spaces:</p>
+            <ul>
+              <li>The first argument is to tell the program which group of characters you want to include in the output.</li>
+              <li>The second argument is to tell the program the length of the output.</li>
+            </ul>
+          </div>
+          <div class="examples">
+            <div class="examples__container">
+              <div class="examples__header">
+                <h2>Example 1</h2>
+                <div class="line"></div>
+              </div>
+              <ul> 
+                <li>Input: <span>nl m</span></li>
+                <li>Output: <span>tjj74s8zw834</span></li>
+              </ul>
+              <div class="examples__explanation">
+                <h3>Explanation</h3>
+                <ul> 
+                  <li>The first argument tells that we want to include numbers (n) and lowercase (l) characters in the output</li>
+                  <li>The second argument tells length of the output must be medium (m) = 12 characters</li>
+                </ul>
+              </div>
+            </div>
+            <div class="examples__container">
+              <div class="examples__header">
+                <h2>Example 2</h2>
+                <div class="line"></div>
+              </div>
+              <ul>
+                <li>input: <span>a l</span></li>
+                <li>output: <span>%LO&}0K0wf2qyOa99EE,5x`]</span></li>
+              </ul>
+              <div class="examples__explanation">
+                <h3>Explanation</h3>
+                <ul>
+                  <li>The first argument tells that we want to include all group of characters in the output (numbers, lowercase letters, uppercase letters and symbols/punctuations)</li>
+                  <li>The second argument tells length of the output must be large (l) = 24 characters</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="syntax" id="syntax">
+          <div class="title">
+            <hr>
+            <h1>Syntax</h1>
+            <hr>
+          </div>
+          <div class="syntax__n-argument">
+            <h2>1st argument</h2>
+            <div class="line"></div>
+          </div>
+          <div class="syntax__list">
+            <ul>
+              <li> <span>n</span> &nbsp;or&nbsp;<span>d</span>&nbsp;Output will include numbers</li>
+              <li> <span>l</span>&nbsp;Output will include lowercase letters</li>
+              <li> <span>u</span>&nbsp;Output will include uppercase letters</li>
+              <li> <span>s</span>&nbsp;Output will include symbols/punctuations</li>
+              <li> <span>a</span>&nbsp;Output will include  all groups of characters</li>
+            </ul>
+          </div>
+          <div class="syntax__n-argument">
+            <h2>2th argument</h2>
+            <div class="line">  </div>
+          </div>
+          <div class="syntax__list">
+            <ul>
+              <li> <span>s</span>&nbsp;Output length will be 6 (small)</li>
+              <li> <span>l</span>&nbsp;Output length will be 24 (large)</li>
+              <li> <span>x</span>&nbsp;Output length will be 48 (extra large)</li>
+              <li> <span>\d+</span>(one or more digits) 
+                &nbsp;Output length will match the given number (max: 128)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="hotkeys" id="hotkeys">
+          <div class="title">
+            <hr>
+            <h1>Hotkeys</h1>
+            <hr>
+          </div>
+          <ul> 
+            <li> <span>enter</span>Send input</li>
+            <li> <span>ctrl + y</span>Copy output to clipboard</li>
+            <li> <span>ctrl + i</span>Focus on the input box</li>
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <p>Made with &#128157; using pug, sass and vanilla js , hosted using aws amplify,  by <a href="mailto:trevzix@gmail.com">trevzix</a></p>
+      </footer>
+    </div><a class="scroll-top" href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+@use "colors" as *;
+
+.instructions {
+  background-color: rgb(34, 33, 33);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.examples {
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+  &__container {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    ul {
+      margin: 1rem;
+    }
+  }
+
+  &__bottom {
+    margin-top: 2rem;
+  }
+
+  &__explanation {
+    border: 2px dotted rgba(255, 255, 255, 0.157);
+    // border: 1px dashed rgba(255, 255, 255, 0.157);
+    padding: 1rem;
+    opacity: 0.9;
+    h3 {
+      font-style: italic;
+    }
+  }
+}

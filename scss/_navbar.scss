@@ -1,0 +1,48 @@
+@use "colors" as c;
+@use "mixins" as mixins;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  @include mixins.max-mq(281px) {
+    position: relative;
+    left: -10px;
+  }
+  &__left {
+    a {
+      padding: 0.3rem;
+      background-color: c.$light;
+      color: c.$dark;
+      cursor: pointer;
+      @include mixins.max-mq(361px) {
+        font-size: 0.9rem;
+        padding: 0.2rem;
+      }
+      @include mixins.max-mq(281px) {
+        position: relative;
+        left: -10px;
+      }
+    }
+
+    i {
+      margin-left: 0.4rem;
+      @include mixins.max-mq(321px) {
+        display: none;
+      }
+    }
+  }
+  &__right {
+    a {
+      margin: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        border-bottom: 1px solid c.$light;
+        padding-bottom: 4px;
+      }
+      @include mixins.max-mq(321px) {
+        margin: 0.3rem;
+      }
+    }
+  }
+  margin-bottom: 3rem;
+}

@@ -1,0 +1,14 @@
+.syntax {
+  background-color: rgb(34, 33, 33);
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  li {
+    line-height: 25px;
+  }
+  &__n-argument {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+  }
+}
