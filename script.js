@@ -37,7 +37,6 @@ inputBox.addEventListener("keypress", (x) => {
       parseInt(secondArgument) <= 128
         ? parseInt(secondArgument)
         : lengthSyntaxes[secondArgument];
-    // console.log(outputLength);
 
     const dividedBy = Math.floor(outputLength / firstArgument.length);
 
@@ -169,12 +168,6 @@ document.addEventListener("keydown", (x) => {
   }
 
   if (x.ctrlKey && x.key === "i") {
-    console.log("pegando na moral");
-    inputBox.focus();
-    window.location.hash = "inputs";
-  }
-  if (x.altKey && x.key === "i") {
-    console.log("pegando na moral");
     inputBox.focus();
     window.location.hash = "inputs";
   }
@@ -185,7 +178,6 @@ document.addEventListener("keydown", (x) => {
 // 3. Nav links
 
 const links = document.querySelectorAll(".links");
-console.log(links);
 
 links.forEach((link) => {
   link.addEventListener("click", (x) => {
