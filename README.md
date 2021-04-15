@@ -1,4 +1,4 @@
-# NMP - No Mouse Password
+# NMP - No Mouse Password generator
 
 I don't like to use the mouse, I will do anything to avoid to take my hands out of the typing position. 
 
@@ -8,12 +8,14 @@ So I created this app that allows me to generate passwords without having to cli
 
 I think the result was good, maybe once I learn enough react I can try to rewrite using the framework, I even got a domain for it, check it out, there's instructions on the website
 
-
-Technologies used
+## Technologies used:
 
 - PUG
 - SASS
 - Vanilla JS
+
+## Website:
+[https://www.nomousepassword.com/](https://www.nomousepassword.com/)
 
 # Desktop version
 ![](https://i.imgur.com/h1aXnyg.png)
