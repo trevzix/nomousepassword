@@ -1,4 +1,3 @@
-// List of allowed characters for each of the checkbox label buttons
 const characterGroups = {
   lowercase: "abcdefghijklmnopqrstuvwxyz",
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -14,17 +13,18 @@ inputBox.addEventListener("keypress", (x) => {
     // Reset the value of outputValue everytime enter is pressed
     let outputValue = "";
 
-    // grab first and second argument
+    // Grab first and second argument
     const firstArgument = inputBox.value.split(" ")[0];
     const secondArgument = inputBox.value.split(" ")[1];
 
-    // check it's validity
-    if (!firstArgumentValidity(firstArgument)) {
-      console.log("first argument is invalid");
-    }
-    if (!secondArgumentValidity(secondArgument)) {
-      console.log("second argument is invalid");
-    }
+    // TODO: Create a better system to check validity
+    // // Check it's validity
+    // if (!firstArgumentValidity(firstArgument)) {
+    //   console.log("first argument is invalid");
+    // }
+    // if (!secondArgumentValidity(secondArgument)) {
+    //   console.log("second argument is invalid");
+    // }
 
     const lengthSyntaxes = {
       s: 6,
@@ -40,7 +40,7 @@ inputBox.addEventListener("keypress", (x) => {
 
     const dividedBy = Math.floor(outputLength / firstArgument.length);
 
-    // loop through each letter inside of firstArgument
+    // Loop through each letter inside of firstArgument
     firstArgument.split("").forEach((x) => {
       if (x === "n" || x === "d") {
         for (let y = 0; y < dividedBy; y++) {
@@ -72,6 +72,7 @@ inputBox.addEventListener("keypress", (x) => {
       }
     });
 
+    // -------------------------------------------------
     // Sometimes the value of the variable password will not match the length that we need, in that case we create a while loop that randomly grabs value from one of the labelBtnsToggled and adds to password until it's length is the same as the variable length.
 
     while (outputValue.length != outputLength) {
@@ -94,45 +95,15 @@ inputBox.addEventListener("keypress", (x) => {
   }
 });
 
+// =================================
+
+// 2. Functions:  indexRandomizer()
+
 function indexRandomizer(x) {
   return Math.floor(Math.random() * x.length);
 }
 
-// check the validity of firstArgument
-// return true if the argument is validy else false
-function firstArgumentValidity(x) {
-  const acceptedChars = "dlnsu";
-  const check = x
-    .split("")
-    .map((x) => acceptedChars.includes(x))
-    .filter((x) => x === false);
-  if (check.length > 0) {
-    return false;
-  }
-  return true;
-}
-
-// check the validity of secondArgument
-// return true if the argument is validy else false
-function secondArgumentValidity(x) {
-  if (parseInt(x) <= 128) {
-    return true;
-  }
-
-  if (x.length > 1) {
-    return false;
-  }
-
-  const acceptedChars = "lmsx";
-  const check = x
-    .split("")
-    .map((x) => acceptedChars.includes(x))
-    .filter((x) => x === false);
-  if (check.length > 0) {
-    return false;
-  }
-  return true;
-}
+// 3. Functions:  shuffleString()
 
 function shuffleString(x) {
   let xResult = x.split(""); // turn string into array
@@ -145,9 +116,47 @@ function shuffleString(x) {
   return xResult.join("");
 }
 
+// TODO: Create a better system to check validity
 // ==================================
 
-// Hotkeys
+// Check the validity of firstArgument
+// return true if the argument is valid else false
+// function firstArgumentValidity(x) {
+//   const acceptedChars = "dlnsu";
+//   const check = x
+//     .split("")
+//     .map((x) => acceptedChars.includes(x))
+//     .filter((x) => x === false);
+//   if (check.length > 0) {
+//     return false;
+//   }
+//   return true;
+// }
+
+// // check the validity of secondArgument
+// // return true if the argument is validy else false
+// function secondArgumentValidity(x) {
+//   if (parseInt(x) <= 128) {
+//     return true;
+//   }
+
+//   if (x.length > 1) {
+//     return false;
+//   }
+
+//   const acceptedChars = "lmsx";
+//   const check = x
+//     .split("")
+//     .map((x) => acceptedChars.includes(x))
+//     .filter((x) => x === false);
+//   if (check.length > 0) {
+//     return false;
+//   }
+//   return true;
+// }
+
+// ==================================
+// 4.Hotkeys
 
 document.addEventListener("keydown", (x) => {
   if (x.ctrlKey && x.key === "y") {
@@ -168,14 +177,14 @@ document.addEventListener("keydown", (x) => {
   }
 
   if (x.ctrlKey && x.key === "i") {
+    window.scrollTo(0, 0);
     inputBox.focus();
-    window.location.hash = "inputs";
   }
 });
 
 // ==================================
 
-// 3. Nav links
+// 5. Nav links
 
 const links = document.querySelectorAll(".links");
 
@@ -195,7 +204,7 @@ links.forEach((link) => {
 
 // ==================================
 
-// 4. Scroll to top  button
+// 6. Scroll to top  button
 
 scrollTop = document.querySelector(".scroll-top");
 
